@@ -1,0 +1,30 @@
+# 遥操作配置文件
+# 修改 enabled_joints 列表来裁剪电机数量
+
+# 启用的电机（必须是以下7个的子集）:
+#   shoulder_pan, shoulder_lift, elbow_flex, wrist_flex, wrist_yaw, wrist_roll, gripper
+enabled_joints:
+  - shoulder_pan
+  - shoulder_lift
+  - elbow_flex
+  - wrist_flex
+  - wrist_yaw
+  - wrist_roll
+  # - gripper
+
+leader:
+  port: /dev/ttyUSB0
+  baudrate: 1000000
+  id: leader1
+
+follower:
+  port: can0
+  can_adapter: socketcan  # socketcan | damiao
+  id: follower1
+
+loop:
+  fps: 60
+  duration: null  # null = 无限运行；设数字则运行对应秒数后停止
+  display_data: false
+  display_ip: null
+  display_port: null
