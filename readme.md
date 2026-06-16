@@ -1,4 +1,4 @@
-# 遥操作 Demo
+# 喷水机械臂 Demo
 
 基于 [LeRobot](https://github.com/huggingface/lerobot) 的遥操作方案，使用 `reBot Arm 102` 作为 leader（主手），`Seeed B601 RS` 作为 follower（从手），支持通过配置裁剪电机数量。
 
@@ -49,7 +49,7 @@ pip install pyyaml
 
 ### 配置文件
 
-所有参数在 [config.yaml](config.yaml) 中管理：
+所有参数在 [scripts/config.yaml](scripts/config.yaml) 中管理：
 
 ```yaml
 # 启用的电机（删减此行即可裁剪电机数量）
@@ -96,6 +96,9 @@ enabled_joints:
 ### 运行
 
 ```bash
+# 进入脚本目录
+cd scripts
+
 # 使用 lerobot 环境的 Python 运行
 python teleoperate.py
 
@@ -122,8 +125,11 @@ lerobot-teleoperate \
 
 ```
 .
-├── config.yaml          # 配置文件（修改电机、端口等）
-├── teleoperate.py       # 遥操作脚本（支持裁剪电机）
-├── lerobot/             # LeRobot 核心库（子模块）
-└── readme.md            # 本文档
+├── readme.md              # 本文档
+├── hardware/
+│   └── README.md          # 硬件说明（设备清单、连接方式、电机定义）
+├── scripts/
+│   ├── config.yaml        # 配置文件（修改电机、端口等）
+│   └── teleoperate.py     # 遥操作脚本（支持裁剪电机）
+└── lerobot/               # LeRobot 核心库（子模块）
 ```
