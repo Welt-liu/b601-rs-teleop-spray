@@ -51,6 +51,11 @@ pip install pyyaml
 
 所有参数在 [scripts/config.yaml](scripts/config.yaml) 中管理：
 
+默认情况下裁剪了gripper，如有特殊需要请修改本配置文件。
+校准文件和id绑定。
+
+
+
 ```yaml
 # 启用的电机（删减此行即可裁剪电机数量）
 enabled_joints:
@@ -100,26 +105,15 @@ enabled_joints:
 cd scripts
 
 # 使用 lerobot 环境的 Python 运行
+
+# ** 首次运行时，需要设置机械臂零点，请将机械臂放置在零位，参考lerobot wiki的零位要求 **
+
 python teleoperate.py
 
 # 指定配置文件
 python teleoperate.py --config /path/to/config.yaml
 ```
 
-### 原始 lerobot-teleoperate CLI（可选）
-
-如果不需要裁剪电机功能，也可以直接使用 lerobot 自带的 CLI：
-
-```bash
-lerobot-teleoperate \
-    --robot.type=seeed_b601_rs_follower \
-    --robot.port=can0 \
-    --robot.id=follower1 \
-    --robot.can_adapter=socketcan \
-    --teleop.type=rebot_arm_102_leader \
-    --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader
-```
 
 ## 文件结构
 
