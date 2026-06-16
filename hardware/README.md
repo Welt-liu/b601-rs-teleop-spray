@@ -1,52 +1,12 @@
-# 硬件说明
+文件说明：
 
-## 设备清单
+02_Gripper_Connector_B.step：B601-RS末端链接件的模型文件，可以基于该模型设计自己的末端。
 
-| 设备 | 型号 | 用途 |
-|---|---|---|
-| leader（主手） | reBot Arm 102 | 遥操作输入端 |
-| follower（从手） | Seeed B601 RS | 遥操作执行端 |
+connector.step：本项目用到的模型文件。用于安装喷头注意该模型的安装孔位需要根据自己3D打印机微调，我的打印机是A1 mini 0.4喷头，可以固定两个螺丝就稳了。螺丝为M5x35.
 
-## 连接方式
+![connector](../media/connector.png)
 
-### leader
+喷头的安装尺寸请参考该图：
+![png1](../media/png1.png)
 
-- 接口：USB 串口
-- 典型端口：`/dev/ttyUSB0`
-- 波特率：`1000000`
 
-### follower
-
-- 接口：CAN 总线
-- 典型端口：`can0`（SocketCAN）或 `/dev/ttyACM0`（Damiao 适配器）
-- 适配器类型：`socketcan` 或 `damiao`
-
-## 电机
-
-默认 7 个关节：
-
-| 序号 | 关节名 | 说明 |
-|---|---|---|
-| 0 | shoulder_pan | 肩部旋转 |
-| 1 | shoulder_lift | 肩部抬升 |
-| 2 | elbow_flex | 肘部弯曲 |
-| 3 | wrist_flex | 腕部弯曲 |
-| 4 | wrist_yaw | 腕部偏航 |
-| 5 | wrist_roll | 腕部滚动 |
-| 6 | gripper | 夹爪（喷水末端） |
-
-> 通常只需要裁剪 `gripper`，其他关节应保留。
-
-## 端口配置
-
-在 [scripts/config.yaml](../scripts/config.yaml) 中修改端口参数：
-
-```yaml
-leader:
-  port: /dev/ttyUSB0
-  baudrate: 1000000
-
-follower:
-  port: can0
-  can_adapter: socketcan  # socketcan | damiao
-```
