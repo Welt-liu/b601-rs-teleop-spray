@@ -1,0 +1,7 @@
+.agents/
+.claude/
+.codebuddy/
+.qwen/
+.trae/
+skills/
+skills-lock.json
