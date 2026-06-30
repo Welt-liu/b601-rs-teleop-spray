@@ -16,7 +16,7 @@
 
 - [快速开始](getting-started.md) — 环境安装与首次运行
 - [硬件指南](hardware.md) — 设备清单、连接方式、末端模型
-- [配置参考](configuration.md) — `config.yaml` 参数详解
+- [配置参考](configuration.md) — `config.yaml` 参数详解2
 
 ## 项目文件结构
 
