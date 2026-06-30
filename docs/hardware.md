@@ -1,7 +1,3 @@
----
-title: 硬件指南
----
-
 # 硬件指南
 
 ## 设备清单
@@ -51,8 +47,8 @@ reBot Arm 102 ──USB──▶ 主机 ◀──CAN Adapter──◀── Seee
 - `connector.step` — 喷头连接件，适用于 A1 Mini 0.4 喷头，使用 M5×35 螺丝固定
 - `02_Gripper_Connector_B.step` — B601-RS 末端通用连接件，可基于此设计自定义末端
 
-![喷头连接件](../media/connector.png)
+![喷头连接件](media/connector.png)
 
-![安装尺寸参考](../media/png1.png)
+![安装尺寸参考](media/png1.png)
 
 > **注意：** 螺丝安装孔位需要根据实际 3D 打印机精度微调。

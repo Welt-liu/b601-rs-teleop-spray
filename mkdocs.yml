@@ -1,0 +1,15 @@
+site_name: B601-RS 喷水遥操作
+site_description: 基于 LeRobot 的双机械臂遥操作文档
+site_url: https://welt-liu.github.io/b601-rs-teleop-spray/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+
+nav:
+  - 首页: index.md
+  - 快速开始: getting-started.md
+  - 硬件指南: hardware.md
+  - 配置参考: configuration.md

@@ -1,7 +1,3 @@
----
-title: 喷水机械臂遥操作
----
-
 # 喷水机械臂遥操作
 
 基于 [LeRobot](https://github.com/huggingface/lerobot) 的双机械臂遥操作系统，使用 **reBot Arm 102** 作为主手（leader）控制 **Seeed B601 RS** 从手（follower），支持通过配置文件裁剪电机数量。
@@ -18,9 +14,9 @@ title: 喷水机械臂遥操作
 
 ## 快速导航
 
-- [快速开始](getting-started) — 环境安装与首次运行
-- [硬件指南](hardware) — 设备清单、连接方式、末端模型
-- [配置参考](configuration) — `config.yaml` 参数详解
+- [快速开始](getting-started.md) — 环境安装与首次运行
+- [硬件指南](hardware.md) — 设备清单、连接方式、末端模型
+- [配置参考](configuration.md) — `config.yaml` 参数详解
 
 ## 项目文件结构
 
